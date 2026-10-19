@@ -7,13 +7,7 @@ class Solution {
         List<Integer> list = new ArrayList<>();
         
         for (int i = left; i <= right; i++) {
-            for (int k = 1; k <= i; k++) {
-                if (i % k == 0) {
-                    list.add(k);
-                }
-            }
-            answer += list.size() % 2 == 0 ? i : -i;
-            list.clear();
+            answer += Math.sqrt(i) % 1 == 0 ? -i : i;
         }
         
         return answer;
