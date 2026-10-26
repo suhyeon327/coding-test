@@ -9,7 +9,7 @@ class Solution {
                 index = 0;
             } else {
                 if (index % 2 == 0) {
-                answer += Character.toUpperCase(s.charAt(i));
+                    answer += Character.toUpperCase(s.charAt(i));
                 } else {
                     answer += Character.toLowerCase(s.charAt(i));
                 }
