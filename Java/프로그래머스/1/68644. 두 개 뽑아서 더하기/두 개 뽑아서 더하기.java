@@ -10,8 +10,6 @@ class Solution {
             }
         }
         
-        int[] answer = new int[set.size()];
-        
         return set.stream()
             .mapToInt(Integer::intValue)
             .sorted()
