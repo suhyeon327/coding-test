@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        List<Integer> list = new ArrayList<>();
+        boolean[] check = new boolean[10001];
 
         for (int i = 1; i <= 10000; i++) {
             int num = i;
@@ -12,12 +12,14 @@ public class Main {
                 sum += num % 10;
                 num /= 10;
             }
-            list.add(sum);
+
+            if (sum <= 10000) {
+                check[sum] = true;
+            }
         }
 
-
-        for (int i = 1; i <= 10000; i++) {
-            if (!list.contains(i)) {
+        for (int i = 1; i < 10000; i++) {
+            if (check[i] == false) {
                 System.out.println(i);
             }
         }
